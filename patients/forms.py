@@ -7,7 +7,7 @@ class PatientForm(forms.ModelForm):
         model = Patient
         exclude = ()
         widgets = {
-            'id': forms.TextInput(
+            'id': forms.NumberInput(
                 attrs={
                     'class': 'form-control',
                     'min': 1,
@@ -21,16 +21,19 @@ class PatientForm(forms.ModelForm):
             ),
             'birth_date': forms.DateInput(
                 attrs={
+                    'placeholder': 'dd/mm/aaaa',
                     'class': 'form-control',
                 }
             ),
             'collection_date': forms.DateInput(
                 attrs={
+                    'placeholder': 'dd/mm/aaaa',
                     'class': 'form-control',
                 }
             ),
             'delivery_date': forms.DateInput(
                 attrs={
+                    'placeholder': 'dd/mm/aaaa',
                     'class': 'form-control',
                 }
             ),
