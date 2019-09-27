@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Excluir{% endblock %}
+
+{% block main %}
+
+<div class="row mb-4">
+    <div class="col">
+        <h1>Confirmar exclusão</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form action="" method="post">
+            {% csrf_token %}
+             <span>Excluir o paciente "{{ object }}"?</span>
+             <button type="submit" class="btn btn-primary btn-sm"> OK </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

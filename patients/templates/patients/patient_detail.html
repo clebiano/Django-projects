@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Paciente{% endblock %}
+
+{% block main %}
+
+<div class="row mb-4">
+    <div class="col">
+        <h1>Dados do paciente</h1>
+    </div>
+</div>
+
+<div class="row">
+    <p id="patientDetailIcon">
+        <a href="{% url 'patient-delete' object.id %}"><i class="fas fa-trash-alt"></i></a>
+        <a href="{% url 'patient-update' object.id %}"><i class="fas fa-pencil-alt"></i></a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col">
+        <p>Código Identificador: {{ object.id }}</p>
+        <p>Nome do Cliente: {{ object.name }}</p>
+        <p>Data de Nascimento: {{ object.birth_date }}</p>
+        <p>Data de Coleta: {{ object.collection_date }}</p>
+        <p>Data de Entrega: {{ object.delivery_date }}</p>
+        <p>Nome do Médico: {{ object.doctor_name }}</p>
+    </div>
+</div>
+{% endblock %}

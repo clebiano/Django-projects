@@ -1,3 +1,8 @@
+
+https://healthapps.herokuapp.com/ | https://git.heroku.com/healthapps.git
+
+
+## Estrutura inicial
 - Criando diretório raiz para o projeto  
 	`$ mkdir healthcare_apps`
 - Entrando no diretório raiz do projeto  
@@ -37,7 +42,7 @@
 	`$ source venv/bin/activate`  
 	`$ pip install --upgrade django`  
 - Criando o projeto inicial django no ambiente virtual venv  
-	`$ django-admin.py startproject book_catalog . ` # o "." permite que o arquivo "manage.py" seja criado na raiz do projeto  
+	`$ django-admin.py startproject healthcare_apps . ` # o "." permite que o arquivo "manage.py" seja criado na raiz do projeto  
 - Verificando se existem alterações para o banco de dados  
 	`$ python manage.py makemigrations`
 - Migrando alterações do django para o banco de dados  
@@ -68,8 +73,12 @@
  - `$ virtualenv -p python3.6 venv`  
 - `$ pip install -r requirements-dev.txt`  
 
-## APP core (principal APP)  
-- Criando APP core  
-	`$ python manage.py startapp core`  
+## APP patients  
+- Criando APP patients  
+	`$ python manage.py startapp patients`  
 
-##
+## API  
+- Criar endpoints simples  
+- Os nomes dos recursos são, por padrão, no plural  
+- Documentar a API  
+- Versionar a API para poder migrar usuários entre versões: /v1/recursos  

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Pacientes{% endblock %}
+
+{% block main %}
+
+<div class="row mb-4">
+    <div class="col">
+        <h1>Pacientes cadastrados</h1>
+    </div>
+</div>
+
+<div class="row mb-4">
+  <div class="col-md-6">
+    <form method="GET" id="search-form" autocomplete="off">
+      <div class="search-div input-group">
+        <input type="text" class="form-control" id="search" name="search"
+          placeholder="Pesquisar pelo código identificador..." value="{{ search }}">
+        <div class="input-group-append">
+          <button class="btn input-group-text lime lighten-2" type="submit" id="search-btn">
+            <i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+      <a href="{% url 'patient-create' %}">
+        <button type="button" class="btn btn-primary buttonAdd"><i class="fas fa-plus"></i> Adicionar</button></a>
+  </div>
+</div>
+
+<div class="row list-header">
+    <div class="col-4">
+      <spa>Nome do Cliente</spa>
+    </div>
+    <div class="col-4 list-content-center">
+      <spa>Código Identificador</spa>
+    </div>
+</div>
+
+<div class="row">
+    {% for patient in object_list %}
+    <div class="col-4 list-item">
+      <a href="{% url 'patient-detail' patient.pk %}">{{ patient.name }}</a>
+    </div>
+    <div class="col-4 list-content-center list-item">
+      {{ patient.id }}
+    </div>
+    <div class="col-4 list-item">
+      <a href="{% url 'patient-delete' patient.pk %}" class="delete-btn">
+        <span><i class="fas fa-trash-alt"></i></span></a>
+      <a href="{% url 'patient-update' patient.pk %}">
+        <span><i class="fas fa-pencil-alt"></i></span></a>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% if is_paginated %}
+<div class="row mt-4">
+    <div class="col pagination">
+        <span class="pagination-links">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-left"></i></a>
+            {% endif %}
+            <span class="page-current">
+                {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"><i class="fas fa-angle-right"></i></a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
