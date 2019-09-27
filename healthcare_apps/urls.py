@@ -15,12 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers
 from django.conf.urls import include
 from home import urls as home_urls
 from patients import urls as patients_urls
+from patients.api.viewsets import PatientViewSet
+
+router = routers.DefaultRouter()
+router.register(r'pacientes', PatientViewSet, base_name='patient')
 
 urlpatterns = [
     path('', include(home_urls)),
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('pacientes/', include(patients_urls)),
 ]
