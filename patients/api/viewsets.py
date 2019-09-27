@@ -14,12 +14,9 @@ class PatientViewSet(ModelViewSet):
 
     def get_queryset(self):
         id = self.request.query_params.get('id', None)
-        # name = self.request.query_params.get('name', None)
         queryset = Patient.objects.all()
         if id:
             queryset = Patient.objects.filter(pk=id)
-        # if name:
-        #     queryset = queryset.filter(name__iexact=name)
         return queryset
 
     # def list(self, request, *args, **kwargs):

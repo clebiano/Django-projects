@@ -1,5 +1,5 @@
 
-/* headings and paragraphs
+/* headings, row, col and paragraphs
 ------------------------------*/
 h1 {
     font-size: 36px;
@@ -12,6 +12,9 @@ h1, h2, h3, h4, h5, h6 {
     color: inherit;
 }
 
+.row {
+    margin-bottom: 30px;
+}
 
 /* icons
 ------------------------------*/
@@ -52,29 +55,15 @@ label.error {
 
 /* list
 ------------------------------*/
-.list-header {
-  font-weight: bold;
-  min-height: 50px;
-  padding-top: 10px;
-  border-bottom: 1px dashed #ccc;
+
+
+
+/* table
+------------------------------*/
+.table {
+    color: inherit;
 }
 
-.list-content-center {
-    text-align: center;
-}
-
-.list-item {
-  list-style: none;
-  min-height: 50px;
-  padding-top: 10px;
-  border-bottom: 1px dashed #ccc;
-}
-
-.list-item a {
-    color: #4d4d4d;
-    text-decoration: none;
-    background-color: transparent;
-}
 
 /* pagination
 ------------------------------*/
@@ -101,7 +90,3 @@ div.patientForm {
     margin-left: auto;
     margin-right: auto;
 }
-
-/*input[type="number" i] {
-  text-align: center;
-}*/

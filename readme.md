@@ -4,8 +4,7 @@
 Plataforma: HealthApps (https://healthapps.herokuapp.com/)  
 Finalidade: Hospedar aplicações relacionadas à área médica  
 
+APP pacientes: https://healthapps.herokuapp.com/pacientes/  
+Api Root: https://healthapps.herokuapp.com/api/v1/  
+
 ![patient_form](https://github.com/clebiano/Django-projects/blob/master/statics/images/patient_form.png)
-
-![patient_list](https://github.com/clebiano/Django-projects/blob/master/statics/images/patient_list.png)
-
-![cell_phone](https://github.com/clebiano/Django-projects/blob/master/statics/images/cell_phone.jpeg)

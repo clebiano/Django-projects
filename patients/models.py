@@ -8,6 +8,8 @@ class Patient(models.Model):
     collection_date = models.DateField(verbose_name='Data de Coleta')
     delivery_date = models.DateField(verbose_name='Data de Entrega')
     doctor_name = models.CharField(max_length=30, verbose_name='Nome do Médico')
+    submission_date = models.DateTimeField(auto_now_add=True, verbose_name='Data da Submissão')
+    update_date = models.DateTimeField(auto_now=True, verbose_name='Data da Última Alteração')
 
     def __str__(self):
         return self.name

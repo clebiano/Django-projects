@@ -26,7 +26,7 @@ router.register(r'pacientes', PatientViewSet, base_name='patient')
 
 urlpatterns = [
     path('', include(home_urls)),
-    path('api/', include(router.urls)),
+    path('api/v1/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('pacientes/', include(patients_urls)),
 ]
