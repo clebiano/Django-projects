@@ -17,16 +17,18 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
+from django.conf import settings
+from django.conf.urls.static import static
 from home import urls as home_urls
 from patients import urls as patients_urls
 from patients.api.viewsets import PatientViewSet
 
 router = routers.DefaultRouter()
-router.register(r'pacientes', PatientViewSet, base_name='patient')
+router.register(r'pacientes', PatientViewSet, base_name='healthcare_apps')
 
 urlpatterns = [
     path('', include(home_urls)),
     path('api/v1/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('pacientes/', include(patients_urls)),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
