@@ -1,0 +1,92 @@
+
+/* headings, row, col and paragraphs
+------------------------------*/
+h1 {
+    font-size: 36px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+/* icons
+------------------------------*/
+.fa-trash-alt {
+  color: #C82333;
+}
+
+.fa-pencil-alt {
+  color: #0069D9;
+}
+
+.fa-trash-alt, .fa-pencil-alt {
+  cursor: pointer;
+  margin: 5px;
+  float: right;
+}
+
+#patientDetailIcon {
+    padding-left: 15px;
+}
+
+
+/* buttons
+------------------------------*/
+.buttonAdd {
+  background-color: #0069D9;
+}
+
+
+/* messages and alert
+------------------------------*/
+label.error {
+  color: #dc3545;
+  padding: 0px 3px;
+  font-size: 12px;
+}
+
+
+/* list
+------------------------------*/
+
+
+
+/* table
+------------------------------*/
+.table {
+    color: inherit;
+}
+
+
+/* pagination
+------------------------------*/
+.pagination {
+    margin-bottom: 20px;
+}
+
+.pagination-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination-links .page-current{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* form
+------------------------------*/
+div.patientForm {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
