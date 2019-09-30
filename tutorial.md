@@ -78,3 +78,10 @@
 - Os nomes dos recursos são, por padrão, no plural  
 - Documentar a API  
 - Versionar a API para poder migrar usuários entre versões: /v1/recursos  
+
+# Arquivos estáticos no Heroku  
+https://github.com/clebiano/django-heroku  
+http://whitenoise.evans.io/en/stable/  
+https://stackoverflow.com/questions/15856358/heroku-collectstatic-not-run-during-deployment  
+`$ heroku run python manage.py collectstatic --dry-run --noinput`  
+
